@@ -238,10 +238,35 @@
 <section id="download" class="py-5 text-center" data-aos="zoom-in">
   <div class="container">
     <h2 class="mb-4">GET THE GAME</h2>
-    <a href="#" class="btn btn-lg btn-warning fw-bold">DOWNLOAD NOW</a>
+    <a href="#download" class="btn btn-lg btn-warning fw-bold mt-5" data-bs-toggle="modal" data-bs-target="#downloadModal">
+      GET THE GAME
+    </a>
   </div>
 </section>
 
+<div class="modal fade" id="downloadModal" tabindex="-1" aria-labelledby="downloadModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-dark text-white border-0">
+      <div class="modal-header border-0">
+        <h5 class="modal-title" id="downloadModalLabel">Choose Your Platform</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <p>Select the platform you want to download the game from:</p>
+        <div class="d-flex flex-column gap-3">
+          <a href="https://yourgame.itch.io" target="_blank" class="btn btn-warning btn-lg fw-bold">
+            <img src="assets/itchio.png" alt="Itch.io" width="24" height="24" class="me-2">
+            Download on Itch.io
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=com.yourgame" target="_blank" class="btn btn-warning btn-lg fw-bold">
+            <img src="assets/ps.png" alt="Play Store" width="24" height="24" class="me-2">
+            Download on Play Store
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- COMMENT -->
 <section id="comment" class="py-5 bg-dark text-white">
