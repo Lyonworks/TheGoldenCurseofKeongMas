@@ -14,12 +14,60 @@
       <div class="col-md-6" data-aos="fade-left">
         <img src="assets/teks.png" style="max-width: 100%;">
         <h3 class="text-white mt-4">The Golden Journey to Break the Curse</h3>
-        <a href="#download" class="btn btn-lg btn-warning fw-bold mt-5">GET THE GAME</a>
+        <a href="https://ikmalionn.itch.io/the-golden-curse-of-keong-mas" class="btn btn-lg btn-warning fw-bold mt-5">
+          GET THE GAME
+        </a>
       </div>
 
     </div>
   </div>
 </section>
+
+<!-- TRAILER -->
+<section id="trailer" class="py-5 text-center">
+  <div class="container">
+    <h2 class="mb-4" data-aos="fade-up">GAME TRAILER</h2>
+
+    <div class="trailer-wrapper" data-aos="zoom-in">
+      <div class="trailer-thumbnail" data-bs-toggle="modal" data-bs-target="#trailerModal">
+        <img src="assets/Thumbnail.png" class="img-fluid rounded-4">
+
+        <!-- Overlay -->
+        <div class="trailer-overlay">
+          <div class="play-button">
+            <img src="assets/play.png" alt="Play Trailer" width="50" height="50">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="modal fade" id="trailerModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-dark border-0">
+
+      <div class="modal-body p-0 position-relative">
+
+        <button 
+          type="button" 
+          class="btn-close position-absolute top-0 end-0 m-3 bg-white"
+          data-bs-dismiss="modal">
+        </button>
+
+        <div class="ratio ratio-16x9">
+          <iframe 
+            id="trailerVideo"
+            src="https://www.youtube.com/embed/nYIoeeYhpxM"
+            title="Game Trailer"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- ABOUT -->
 <section id="about" class="py-5">
@@ -217,7 +265,7 @@
                     <?= date('d M Y', strtotime($n['created_at'])) ?>
                   </small>
                 </div>
-                <p class="card-text opacity-75">
+                <p class="card-text text-dark opacity-75">
                   <?= substr(strip_tags($n['content']), 0, 100) ?>...
                 </p>
               </div>
@@ -233,40 +281,6 @@
     </div>
   </div>
 </section>
-
-<!-- DOWNLOAD -->
-<section id="download" class="py-5 text-center" data-aos="zoom-in">
-  <div class="container">
-    <h2 class="mb-4">GET THE GAME</h2>
-    <a href="#download" class="btn btn-lg btn-warning fw-bold mt-5" data-bs-toggle="modal" data-bs-target="#downloadModal">
-      GET THE GAME
-    </a>
-  </div>
-</section>
-
-<div class="modal fade" id="downloadModal" tabindex="-1" aria-labelledby="downloadModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content bg-dark text-white border-0">
-      <div class="modal-header border-0">
-        <h5 class="modal-title" id="downloadModalLabel">Choose Your Platform</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body text-center">
-        <p>Select the platform you want to download the game from:</p>
-        <div class="d-flex flex-column gap-3">
-          <a href="https://yourgame.itch.io" target="_blank" class="btn btn-warning btn-lg fw-bold">
-            <img src="assets/itchio.png" alt="Itch.io" width="24" height="24" class="me-2">
-            Download on Itch.io
-          </a>
-          <a href="https://play.google.com/store/apps/details?id=com.yourgame" target="_blank" class="btn btn-warning btn-lg fw-bold">
-            <img src="assets/ps.png" alt="Play Store" width="24" height="24" class="me-2">
-            Download on Play Store
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
 <!-- COMMENT -->
 <section id="comment" class="py-5 bg-dark text-white">

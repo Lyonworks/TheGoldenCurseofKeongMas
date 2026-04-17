@@ -23,7 +23,7 @@ if (!isset($_SESSION['user_token'])) {
   <div class="container">
 
     <a class="navbar-brand" href="/">
-      <img src="assets/icon.png" alt="Logo" style="max-height: 40px;">
+      <img src="assets/teks.png" alt="Logo" style="max-height: 33px;">
     </a>
 
     <!-- TOGGLER (INI YANG KAMU BELUM PUNYA) -->
@@ -39,19 +39,16 @@ if (!isset($_SESSION['user_token'])) {
     <div class="collapse navbar-collapse" id="menu">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="/">Home</a>
+          <a class="nav-link" href="/">HOME</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/index.php#about">About</a>
+          <a class="nav-link" href="/index.php#about">ABOUT</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/index.php#merchandise">Merchandise</a>
+          <a class="nav-link" href="/index.php#merchandise">MERCHANDISE</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/news.php">News</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/index.php#download">Download</a>
+          <a class="nav-link" href="/news.php">NEWS</a>
         </li>
       </ul>
     </div>

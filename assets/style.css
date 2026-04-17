@@ -4,10 +4,45 @@ html {
 
 section {
   scroll-margin-top: 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+#trailer {
+  background: linear-gradient(to top, #3f6418, #507507);
+}
+
+#about {
+  background: #3f6418;
+}
+
+#developer {
+  background: linear-gradient(135deg, #507507, #2e4d1f);
+}
+
+#merchandise {
+  background: #3a5c15;
+}
+
+#news {
+  background: linear-gradient(135deg, #2b4712, #3f6418);
+}
+
+#comment {
+  background: #1f330c;
 }
 
 .navbar{
-  font-family: 'Cinzel', serif;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
   color: #111;
   background-color: #e99c05;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
@@ -24,7 +59,7 @@ h2, h4 {
 }
 
 h3 {
-  font-family: 'Cinzel', serif;
+  font-family: 'Jakarta', sans-serif;
   color: #e99c05;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
@@ -41,6 +76,55 @@ p {
 
 .edit-btn {
   cursor: pointer;
+}
+
+.trailer-wrapper {
+  max-width: 800px;
+  margin: auto;
+}
+
+.trailer-thumbnail {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.trailer-thumbnail img {
+  transition: 0.4s ease;
+}
+
+.trailer-thumbnail:hover img {
+  transform: scale(1.05);
+  filter: brightness(0.6);
+}
+
+.trailer-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-button {
+  width: 80px;
+  height: 80px;
+  background: #ffc107;
+  color: black;
+  font-size: 32px;
+  border-radius: 50%;
+  border-color: black;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
+  transition: 0.3s;
+}
+
+.trailer-thumbnail:hover .play-button {
+  transform: scale(1.2);
 }
 
 .about-images-wrapper {
@@ -316,8 +400,8 @@ p {
 }
 
 .comment-list {
-  max-height: 420px;
-  overflow-y: auto;
+  max-height: none;
+  overflow: visible;
   padding-right: 6px;
 }
 
@@ -330,8 +414,9 @@ p {
 }
 
 .reply-list {
-  max-height: 180px;
+  max-height: 220px; /* batas tinggi */
   overflow-y: auto;
+  overflow-x: hidden; /* penting biar ga geser ke samping */
   margin-top: 10px;
   padding-right: 6px;
 }
@@ -351,7 +436,9 @@ p {
 
 .reply-box {
   border-left: 3px solid #e99c05;
-  padding-left: 5px;
+  padding-left: 10px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 @keyframes glowPulse {
@@ -361,9 +448,9 @@ p {
 }
 
 @font-face {
-  font-family: 'Cinzel';
-  src: url('assets/fonts/Cinzel/Cinzel-Bold.ttf') format('truetype');
-  font-weight: 700;
+  font-family: 'Jakarta';
+  src: url('assets/fonts/PlusJakartaSans/PlusJakartaSans-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
 }
 
 @font-face {

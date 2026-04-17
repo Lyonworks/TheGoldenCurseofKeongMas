@@ -37,7 +37,7 @@ mysqli_query($conn, "UPDATE comments SET is_read = 1 WHERE is_read = 0");
             </td>
 
             <td>
-              <form action="../process/delete_comment.php"
+              <form action="../process/delete_comment_admin.php"
                     method="POST"
                     onsubmit="return confirm('Delete this comment?');">
 
